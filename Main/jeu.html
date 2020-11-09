@@ -1,0 +1,58 @@
+<!--Groupe:B131 
+    Nom: NGUYEN Doan
+    Login: 52818-->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="jeuStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Snake</title>
+</head>
+
+<body>
+    <header>
+        <h1>Snake Game: ne vous mordez pas la queue!</h1>
+    </header>
+
+    <div id="main">
+        <div id="board">
+
+        </div>
+
+        <div id="infoScore">
+
+            <div id="gameOver">Game over !</div>
+            Meilleur score: <span id="bestScore"></span> // <span id="name"></span><br />
+            Votre score: <span id="score"></span><br />
+            <button id="playAgain" type="button" onclick="playAgain()">Rejouer</button>
+            <button id="resetScore" type="button" onclick="resetScore()">Reset score</button>
+
+
+        </div>
+    </div>
+
+    <footer>
+        NGUYEN Doan - 52818 - B131 // M. Codutti
+    </footer>
+
+    <script src="../JS/Position.js"></script>
+    <script src="../JS/Snake.js"></script>
+    <script src="../JS/Fruit.js"></script>
+    <script src="../JS/view.js"></script>
+    <script src="../JS/controller.js"></script>
+
+    <script>
+        initialize();
+        let startGame = setInterval(function () { game() }, 150);
+        setInterval(function () { snake.grow() }, 5000);
+    </script>
+
+</body>
+
+</html>
